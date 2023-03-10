@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-xxl navbar-dark" aria-label="Seventh navbar example"
     style="background-color: #2c2c2c">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="{% url 'index' %}">Home</a>
 
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -13,11 +13,12 @@
             <a class="nav-link active" aria-current="page" href="#">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Create New Profile</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'register' %}">Create New Profile</a>
           </li>
         </ul>
-        <form>
-          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
